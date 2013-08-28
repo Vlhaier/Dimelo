@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>Dímelo</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="../css/style.css"/>
+	<link rel="stylesheet" href="../css/headers.css">
+</head>
+
+<body>
+
+	<section role="region">
+		<header>
+			<a href="principal.html"><span class="icon icon-back">back</span></a>
+			<h1>ABC</h1>
+		</header>
+	</section>
+	
+	<picture>
+		<img src="../img/secciones.png" width="100%" />
+	</picture>
+
+	<select id="seleccion" onblur="valor()" required>
+	  <option value="a.png">A</option>
+	  <option value="b.png">B</option>
+	  <option value="c.png">C</option>
+	  <option value="d.png">D</option>
+	  <option value="e.png">E</option>
+	  <option value="f.png">F</option>
+	  <option value="g.png">G</option>
+	  <option value="h.png">H</option>
+	  <option value="i.png">I</option>
+	  <option value="j.gif">J</option>
+	  <option value="k.gif">K</option>
+	  <option value="l.png">L</option>
+	  <option value="m.png">M</option>
+	  <option value="n.png">N</option>
+	  <option value="ene.gif">Ñ</option>
+	  <option value="o.png">O</option>
+	  <option value="p.png">P</option>
+	  <option value="q.gif">Q</option>
+	  <option value="r.png">R</option>
+	  <option value="s.png">S</option>
+	  <option value="t.png">T</option>
+	  <option value="u.png">U</option>
+	  <option value="v.png">V</option>
+	  <option value="w.png">W</option>
+	  <option value="x.gif">X</option>
+	  <option value="y.png">Y</option>
+	  <option value="z.gif">Z</option>
+	</select>
+
+	<img src="" id="imagen" width="50%" />
+
+	<script type="text/javascript">
+		function valor() {
+			letra = document.getElementById("seleccion").value;
+			document.getElementById('imagen').src = "../img/abc/"+letra;
+		}
+	</script>
+
+</body>
+</html>

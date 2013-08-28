@@ -1,0 +1,38 @@
+/* ----------------------------------
+* Input areas
+* ---------------------------------- */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="url"],
+input[type="number"],
+textarea {
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+  width: 65%;
+  height: 2rem;
+  resize: none;
+  font-size: 1rem;
+  line-height: 4rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.3rem;
+  box-shadow: none; /* override the box-shadow from the system (performance issue) */
+  background: #fff url(../img/images/ui/shadow.png) repeat-x;
+}
+
+
+/* fix for required inputs with wrong or empty value e.g. [type=email] */
+input:invalid,
+textarea:invalid {
+  border: 0.1rem solid #820000;
+  color: #b90000;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #858585;
+  opacity: 1;
+}
+

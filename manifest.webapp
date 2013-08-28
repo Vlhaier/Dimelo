@@ -1,0 +1,13 @@
+{
+  "name": "Dímelo",
+  "description": "Lenguaje de Señas Mexicano",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon.png"
+  },
+  "developer": {
+    "name": "Carlos Anza",
+    "url": "http://lionteamsoft.com.mx"
+  },
+  "default_locale": "es"
+}
