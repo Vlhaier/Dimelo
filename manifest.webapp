@@ -1,7 +1,7 @@
 {
   "name": "Dímelo",
   "description": "Lenguaje de Señas Mexicano",
-  "launch_path": "/index.html",
+  "launch_path": "/New/index.html",
   "icons": {
     "128": "/img/icon.png"
   },
