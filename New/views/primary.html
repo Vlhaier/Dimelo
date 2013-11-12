@@ -184,25 +184,115 @@
     .landscape section[role="region"]#drawer > header:first-child {
       /* Whatever needs to be changed on landscape */
     }
+
+    #abc_section {
+      position: fixed;
+      -moz-transform: translateX(100%);
+      -moz-transition: -moz-transform 1s;
+    }
+
+    #abc_section:target {
+      -moz-transform: translateX(0%);
+    }
+
+    .primary:target {
+      -moz-transform: translateX(0%);
+    }
+
+    #option {
+      position: absolute;
+      opacity: 0.6;
+      font-weight: 400;
+    }
   </style>
 </head>
 <body>
   <section id="index" data-position="current">
     <picture>
-    <img src="../images/fondo2.png" width="100%" />
-  </picture>
-  <picture>
-    <a href="#abc"><img id="abc" src="../images/abc.png" width="20%" /></a>
-  </picture>
-  <picture>
-    <a href="#numbers"><img id="numeros" src="../images/123.png" width="20%" /></a>
-  </picture>
-  <picture>
-    <a href="#spelling"><img id="deletreo" src="../images/deletreo.png" width="20%" /></a>
-  </picture>
-
-  <iframe src="http://www.lionteamsoft.com.mx/Respaldo/banner/images/banner.html" height="40" width="100%" frameborder="0" scrolling="0"></iframe>
+      <img src="../images/fondo2.png" width="100%" />
+    </picture>
+    <picture>
+      <a href="#abc_section"><img id="abc" src="../images/abc.png" width="20%" /></a>
+    </picture>
+    <picture>
+      <a href="#numbers"><img id="numeros" src="../images/123.png" width="20%" /></a>
+    </picture>
+    <picture>
+      <a href="#spelling"><img id="deletreo" src="../images/deletreo.png" width="20%" /></a>
+    </picture>
+    <iframe id="marketing" src="http://www.lionteamsoft.com.mx/Respaldo/banner/images/banner.html" height="40" width="100%" frameborder="0" scrolling="0"></iframe>
   </section>
+
+  <form data-position="right" id="abc_section">
+    <section role="region">
+      <header class="fixed">
+        <a id="btn-switches-back" href="#primary"><span class="icon icon-back">back</span></a>
+        <h1>ABC</h1>
+      </header>
+      <article class="scrollable header">
+      <picture>
+        <img src="../images/secciones.png" height="100%" />
+      </picture>
+      <ul>
+        <li>
+          <span class="button icon icon-dialog">
+            <span id="option"></span>
+            <select name="region.current" id="seleccion" onblur="valor()" required>
+        <option value="a.png">A</option>
+        <option value="b.png">B</option>
+        <option value="c.png">C</option>
+        <option value="d.png">D</option>
+        <option value="e.png">E</option>
+        <option value="f.png">F</option>
+        <option value="g.png">G</option>
+        <option value="h.png">H</option>
+        <option value="i.png">I</option>
+        <option value="j.gif">J</option>
+        <option value="k.gif">K</option>
+        <option value="l.png">L</option>
+        <option value="m.png">M</option>
+        <option value="n.png">N</option>
+        <option value="ene.gif">Ñ</option>
+        <option value="o.png">O</option>
+        <option value="p.png">P</option>
+        <option value="q.gif">Q</option>
+        <option value="r.png">R</option>
+        <option value="s.png">S</option>
+        <option value="t.png">T</option>
+        <option value="u.png">U</option>
+        <option value="v.png">V</option>
+        <option value="w.png">W</option>
+        <option value="x.gif">X</option>
+        <option value="y.png">Y</option>
+        <option value="z.gif">Z</option>
+      </select>
+      </span>
+            </li>
+          </ul>
+      <img src="" id="imagen" width="50%" />
+      </article>
+    </section>
+  </form>
+
+  <script type="text/javascript">
+    function newWindow() {
+      location.href="#primary";
+    }
+
+    function valor() {
+      letra = document.getElementById("seleccion").value;
+      document.getElementById('imagen').src = "../images/abc/"+letra;
+    }
+  </script>
+
+  <script type="text/javascript">
+    $( "#seleccion" ).change(function(){
+      var str = "";
+      $( "select option:selected" ).each(function(){
+      str = $( this ).text();
+    });
+      $( "#option" ).text( str );}).change();
+  </script>
 </body>
 </html>
 

@@ -9,7 +9,7 @@ img{
 	position: fixed;
 }
 
-iframe{
+#marketing {
 	position: absolute;
 	bottom: 0;
 	padding: 0;
@@ -39,11 +39,14 @@ iframe{
 
 #seleccion{
 	position: absolute;
-	bottom: 1%;
+	bottom: 0;
 	z-index: 1;
 	width: 100%;
-	height: 5%;
-	text-align: center;
+	height: 100%;
+	margin-left: -6%;
+	border:none;
+	background: transparent;
+	opacity: 0;
 }
 
 #imagen{
