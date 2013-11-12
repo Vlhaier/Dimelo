@@ -272,7 +272,7 @@
       <picture>
         <img src="" id="imagen" width="48%">
       </picture>
-      <audio></audio>
+      <audio src="../sound/a.ogg" autoplay id="sound"></audio>
       </article>
     </section>
   </form>
@@ -286,6 +286,7 @@
     function valor() {
       letra = document.getElementById("seleccion").value;
       document.getElementById('imagen').src = "../images/abc/"+letra;
+      document.getElementById('sound').src = "../sound/a.mp3";
     }
   </script>
 
