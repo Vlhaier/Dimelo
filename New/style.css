@@ -39,20 +39,25 @@ img{
 
 #seleccion{
 	position: absolute;
-	bottom: 0;
 	z-index: 1;
 	width: 100%;
 	height: 100%;
-	margin-left: -6%;
+	margin-left: -5%;
 	border:none;
 	background: transparent;
 	opacity: 0;
 }
 
+ul[class="abc_button"] {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
 #imagen{
 	position: absolute;
 	left: 25%;
-	top: 20%;
+	top: 16%;
 }
 
 #imagen1{
