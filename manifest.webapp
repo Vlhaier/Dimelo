@@ -9,5 +9,6 @@
     "name": "Carlos Anza",
     "url": "http://lionteamsoft.com.mx"
   },
-  "default_locale": "es"
+  "default_locale": "es",
+  "orientation": ["portrait"]
 }

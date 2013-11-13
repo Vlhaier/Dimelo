@@ -37,7 +37,7 @@ img{
 	top: 45%;	
 }
 
-#seleccion{
+#selection{
 	position: absolute;
 	z-index: 1;
 	width: 100%;
@@ -50,8 +50,9 @@ img{
 
 ul[class="abc_button"] {
 	position: absolute;
-	bottom: 0;
-	width: 100%;
+	bottom: 1%;
+	left: 7.5%;
+	width: 85%;
 }
 
 #imagen{
