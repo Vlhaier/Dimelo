@@ -185,13 +185,13 @@
       /* Whatever needs to be changed on landscape */
     }
 
-    #abc_section {
+    #abc_section, #numbers_section {
       position: fixed;
       -moz-transform: translateX(100%);
       -moz-transition: -moz-transform 1s;
     }
 
-    #abc_section:target {
+    #abc_section:target, #numbers_section:target {
       -moz-transform: translateX(0%);
     }
 
@@ -199,7 +199,7 @@
       -moz-transform: translateX(0%);
     }
 
-    #option {
+    #option, #option_2 {
       position: absolute;
       opacity: 0.6;
       font-weight: 400;
@@ -277,6 +277,43 @@
     </section>
   </form>
 
+  <form data-position="right" id="numbers_section">
+    <section role="region">
+      <header class="fixed">
+        <a id="btn-switches-back" href="#primary"><span class="icon icon-back">back</span></a>
+        <h1>Números</h1>
+      </header>
+      <article class="scrollable header">
+      <picture>
+        <img src="../images/secciones.png" height="100%" />
+      </picture>
+      <ul class="numbers_button">
+        <li>
+          <span class="button icon icon-dialog">
+            <span id="option_2"></span>
+            <select name="region.current" id="selection_2" onblur="valor()" required>
+              <option value="1.png">1</option>
+              <option value="2.png">2</option>
+              <option value="3.png">3</option>
+              <option value="4.png">4</option>
+              <option value="5.png">5</option>
+              <option value="6.png">6</option>
+              <option value="7.png">7</option>
+              <option value="8.png">8</option>
+              <option value="9.gif">9</option>
+              <option value="a.gif">10</option>
+            </select>
+          </span>
+        </li>
+      </ul>
+      <picture>
+        <img src="" id="imagen_2" width="48%">
+      </picture>
+      <audio src="" autoplay id="sound"></audio>
+      </article>
+    </section>
+  </form>
+
   <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
   <script type="text/javascript">
     function newWindow() {
@@ -284,9 +321,13 @@
     }
 
     function valor() {
-      letra = document.getElementById("selection").value;
-      var option = letra.substring(0,1);
-      document.getElementById('imagen').src = "../images/abc/"+letra;
+      letter = document.getElementById("selection").value;
+      number = document.getElementById("selection_2").value;
+      var option = letter.substring(0,1);
+      var option_2 = number.substring(0,1);
+      document.getElementById('imagen').src = "../images/abc/"+letter;
+      document.getElementById('sound').src = "../sound/"+option+".mp3";
+      document.getElementById('imagen_2').src = "../images/numbers/"+number;
       document.getElementById('sound').src = "../sound/"+option+".mp3";
     }
   </script>
@@ -294,10 +335,17 @@
   <script type="text/javascript">
     $( "#selection" ).change(function(){
       var str = "";
-      $( "select option:selected" ).each(function(){
+      $(this).find( "option:selected" ).each(function(){
       str = $( this ).text();
     });
       $( "#option" ).text( str );}).change();
+
+    $( "#selection_2" ).change(function(){
+      var str = "";
+      $(this).find( "option:selected" ).each(function(){
+      str = $( this ).text();
+    });
+      $( "#option_2" ).text( str );}).change();
   </script>
 </body>
 </html>

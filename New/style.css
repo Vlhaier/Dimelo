@@ -37,7 +37,7 @@ img{
 	top: 45%;	
 }
 
-#selection{
+#selection, #selection_2 {
 	position: absolute;
 	z-index: 1;
 	width: 100%;
@@ -48,14 +48,14 @@ img{
 	opacity: 0;
 }
 
-ul[class="abc_button"] {
+ul[class="abc_button"], ul[class="numbers_button"] {
 	position: absolute;
 	bottom: 1%;
 	left: 7.5%;
 	width: 85%;
 }
 
-#imagen{
+#imagen, #imagen_2 {
 	position: absolute;
 	left: 25%;
 	top: 16%;
