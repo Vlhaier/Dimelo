@@ -6,21 +6,11 @@
   <title>Dímelo</title>
   <link rel="stylesheet" type="text/css" media="screen" href="../style.css"/>
   <!-- Building blocks -->
-  <link rel="stylesheet" href="style/action_menu.css">
   <link rel="stylesheet" href="../style/buttons.css">
   <link rel="stylesheet" href="../style/confirm.css">
-  <link rel="stylesheet" href="style/edit_mode.css">
   <link rel="stylesheet" href="../style/headers.css">
   <link rel="stylesheet" href="../style/input_areas.css">
-  <link rel="stylesheet" href="style/status.css">
-  <link rel="stylesheet" href="style/switches.css">
   <link rel="stylesheet" href="../style_unstable/drawer.css">
-  <link rel="stylesheet" href="style_unstable/lists.css">
-  <link rel="stylesheet" href="style_unstable/progress_activity.css">
-  <link rel="stylesheet" href="style_unstable/scrolling.css">
-  <link rel="stylesheet" href="style_unstable/seekbars.css">
-  <link rel="stylesheet" href="style_unstable/tabs.css">
-  <link rel="stylesheet" href="style_unstable/toolbars.css">
 
   <!-- Icons -->
   <link rel="stylesheet" href="../icons/styles/action_icons.css">
@@ -185,13 +175,13 @@
       /* Whatever needs to be changed on landscape */
     }
 
-    #abc_section, #numbers_section {
+    #abc_section, #numbers_section, #spelling_section {
       position: fixed;
       -moz-transform: translateX(100%);
       -moz-transition: -moz-transform 1s;
     }
 
-    #abc_section:target, #numbers_section:target {
+    #abc_section:target, #numbers_section:target, #spelling_section:target {
       -moz-transform: translateX(0%);
     }
 
@@ -314,6 +304,31 @@
     </section>
   </form>
 
+  <form data-position="right" id="spelling_section">
+    <section role="region">
+      <header class="fixed">
+        <a id="btn-switches-back" href="#primary"><span class="icon icon-back">back</span></a>
+        <h1>Deletreo</h1>
+      </header>
+      <article class="scrollable header">
+      <picture>
+        <img src="../images/secciones.png" height="100%" />
+      </picture>
+      
+      <form role="search" class="bottom">
+      <button type="submit">Send</button>
+      <p>
+        <textarea required></textarea>
+      </p>
+    </form>
+      <!--picture>
+        <img src="" id="imagen_2" width="48%">
+      </picture-->
+      <audio src="" autoplay id="sound_3"></audio>
+      </article>
+    </section>
+  </form>
+
   <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
   <script type="text/javascript">
     function newWindow() {
@@ -331,7 +346,7 @@
       number = document.getElementById("selection_2").value;
       var option_2 = number.substring(0,1);
       document.getElementById('imagen_2').src = "../images/numbers/"+number;
-      document.getElementById('sound_2').src = "../sound/z.mp3";
+      document.getElementById('sound_2').src = "../sound/z.mp3"; //Faltan sonidos números, checar fondo, que se repita xq la imagen reestirada no abarca más
     }
   </script>
 
