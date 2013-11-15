@@ -237,7 +237,7 @@
         <li>
           <span class="button icon icon-dialog">
             <span id="option"></span>
-            <select name="region.current" id="selection" onblur="valor()" required>
+            <select name="region.current" id="selection" onblur="action_1()" required>
               <option value="a.png">A</option>
               <option value="b.png">B</option>
               <option value="c.png">C</option>
@@ -291,7 +291,7 @@
         <li>
           <span class="button icon icon-dialog">
             <span id="option_2"></span>
-            <select name="region.current" id="selection_2" onblur="valor()" required>
+            <select name="region.current" id="selection_2" onblur="action_2()" required>
               <option value="1.png">1</option>
               <option value="2.png">2</option>
               <option value="3.png">3</option>
@@ -309,7 +309,7 @@
       <picture>
         <img src="" id="imagen_2" width="48%">
       </picture>
-      <audio src="" autoplay id="sound"></audio>
+      <audio src="" autoplay id="sound_2"></audio>
       </article>
     </section>
   </form>
@@ -320,15 +320,18 @@
       location.href="#primary";
     }
 
-    function valor() {
+    function action_1() {
       letter = document.getElementById("selection").value;
-      number = document.getElementById("selection_2").value;
       var option = letter.substring(0,1);
-      var option_2 = number.substring(0,1);
       document.getElementById('imagen').src = "../images/abc/"+letter;
       document.getElementById('sound').src = "../sound/"+option+".mp3";
+    }
+
+    function action_2() {
+      number = document.getElementById("selection_2").value;
+      var option_2 = number.substring(0,1);
       document.getElementById('imagen_2').src = "../images/numbers/"+number;
-      document.getElementById('sound').src = "../sound/"+option+".mp3";
+      document.getElementById('sound_2').src = "../sound/z.mp3";
     }
   </script>
 
