@@ -1,9 +1,10 @@
 {
   "name": "Dímelo",
   "description": "Lenguaje de Señas Mexicano",
-  "launch_path": "/New/index.html",
+  "launch_path": "/index.html",
   "icons": {
-    "128": "/img/icon.png"
+    "60": "/images/icon_60.png",
+    "128": "/images/icon_128.png"
   },
   "developer": {
     "name": "Carlos Anza",
